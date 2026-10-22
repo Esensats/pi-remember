@@ -1,0 +1,11 @@
+# Dependencies and package artifacts
+node_modules/
+*.tgz
+coverage/
+
+# Local agent memory and settings
+.pi/
+
+# Editor and OS files
+.DS_Store
+*.swp

@@ -1,0 +1,51 @@
+{
+  "name": "@seangle/pi-remember",
+  "description": "Durable, plain-file local and project memory for the Pi coding agent.",
+  "version": "0.2.0",
+  "license": "Apache-2.0",
+  "author": "Esensats",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Esensats/pi-remember.git"
+  },
+  "homepage": "https://github.com/Esensats/pi-remember#readme",
+  "bugs": {
+    "url": "https://github.com/Esensats/pi-remember/issues"
+  },
+  "keywords": ["pi-package", "pi-extension", "memory", "persistent-memory"],
+  "files": [
+    "index.ts",
+    "command.ts",
+    "inject.ts",
+    "migration.ts",
+    "notes.ts",
+    "search.ts",
+    "store.ts",
+    "summary.ts",
+    "workspace.ts",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": ["./index.ts"]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "engines": {
+    "node": ">=22.15.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "type": "module",
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "test": "node --experimental-strip-types --test \"test/*.test.ts\""
+  }
+}
